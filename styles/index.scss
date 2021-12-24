@@ -1,6 +1,5 @@
 @import './base/base';
 @import './base/reset';
 
-h1{
-  color: blue;
-}
+@import './components//navigation.scss';
+

@@ -8,13 +8,9 @@ export default class Home extends Page {
       elements: {},
     });
   }
-  init(){
-    console.log(this.element)
-  }
-  /*async init() {
-    const { default: BlockAcordeon } = await import(
-      '../../components/BlockAcordeon'
-    );
+  async init() {
+    const { default: BlockAcordeon } = await import('../../components/BlockAcordeon');
+    console.log(BlockAcordeon)
     new BlockAcordeon({});
-  }*/
+  }
 }

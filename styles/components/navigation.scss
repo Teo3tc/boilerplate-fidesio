@@ -1,0 +1,12 @@
+.navigation{
+    display: grid;
+}
+.navigation__wrapper{
+    padding: 1rem ;
+    display: grid;
+    grid-template: auto / auto auto;
+}
+.navigation__list{
+    display: grid;
+    justify-items: flex-end;
+}

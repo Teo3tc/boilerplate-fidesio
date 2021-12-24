@@ -5,7 +5,7 @@ export default class App {
   constructor() {
     this.createContent();
     this.createPages();
-    //this.createNavigation();
+    this.createNavigation();
   }
   async createNavigation() {
     const { default: Navigation } = await import('./components/Navigation');
@@ -20,9 +20,6 @@ export default class App {
   async createPages() {
     const { default: Home } = await import('./pages/home');
     const { default: About } = await import('./pages/about');
-
-  
-
     this.pages = {
       home: new Home(),
       about: new About(),

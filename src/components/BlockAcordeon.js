@@ -5,7 +5,7 @@ export default class BlockAcordeon extends Component {
     super({
       element: '.js-block__acordeon',
       elements: {
-        items: '.js-block__acordeon__list__item',
+        //items: '.js-block__acordeon__list__item',
       },
     });
 
