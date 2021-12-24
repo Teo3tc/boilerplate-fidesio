@@ -1,10 +1,11 @@
+
+
+
 export default class App {
   constructor() {
     this.createContent();
     this.createPages();
-    this.createNavigation();
-    this.addLinkListeners();
-    this.addEventListeners();
+    //this.createNavigation();
   }
   async createNavigation() {
     const { default: Navigation } = await import('./components/Navigation');
@@ -13,12 +14,14 @@ export default class App {
     });
   }
   createContent() {
-    this.template = this.content.getAttribute('data-template');
+    this.template = document.querySelector('[data-template]').getAttribute('data-template');
   }
 
   async createPages() {
     const { default: Home } = await import('./pages/home');
     const { default: About } = await import('./pages/about');
+
+  
 
     this.pages = {
       home: new Home(),
@@ -27,20 +30,11 @@ export default class App {
 
     this.page = this.pages[this.template];
     this.page.create();
+    this.page.init()
   }
 
-  /*onChange() {
-      this.page.create();
-      this.addLinkListeners();
-  }
-
-  addLinkListeners() {
-      const links = document.querySelectorAll("a");
-      each(links, (link) => {
-          link.onclick = (event) => {
-          this.onChange(href);
-          };
-      });
-
-  }*/
+  
 }
+
+  new App()
+

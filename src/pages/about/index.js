@@ -8,4 +8,7 @@ export default class About extends Page {
       elements: {},
     });
   }
+  init(){
+    console.log(this.element)
+  }
 }

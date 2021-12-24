@@ -16,7 +16,6 @@ const dirNode = 'node_modules';
 
 module.exports = {
   entry: [path.join(dirApp, 'index.js'), path.join(dirStyles, 'index.scss')],
-
   resolve: {
     modules: [dirApp, dirShared, dirStyles, dirNode],
   },
@@ -123,8 +122,5 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
-    splitChunks: {
-      chunks: 'all',
-    },
   },
 };

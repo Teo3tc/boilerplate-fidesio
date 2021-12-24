@@ -7,12 +7,14 @@ export default class Home extends Page {
       element: '.p-home',
       elements: {},
     });
-    this.init();
   }
-  async init() {
+  init(){
+    console.log(this.element)
+  }
+  /*async init() {
     const { default: BlockAcordeon } = await import(
       '../../components/BlockAcordeon'
     );
     new BlockAcordeon({});
-  }
+  }*/
 }
